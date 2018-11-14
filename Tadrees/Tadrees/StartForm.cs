@@ -51,5 +51,32 @@ namespace Tadrees
         {
 
         }
+
+        private void SignUpStudentButtonSignUp_Click(object sender, EventArgs e)
+        {
+            OpenClassesForm(SignupStudentComboBox.Text);
+        }
+
+        private void LoginButtonLogin_Click(object sender, EventArgs e)
+        {
+            OpenClassesForm(LoginComboBox.Text);
+        }
+        private void OpenClassesForm(string text)
+        {
+            if (text == "Student")
+            {
+                this.Hide();
+                Form form = new StudentClassesForm();
+                form.FormClosed += (s, args) => this.Close();
+                form.Show();
+            }
+            else
+            {
+                this.Hide();
+                Form form = new TeacherClassesForm();
+                form.FormClosed += (s, args) => this.Close();
+                form.Show();
+            }
+        }
     }
 }

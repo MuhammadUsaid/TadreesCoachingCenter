@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TeacherClassesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherClassesForm.Designer.cs">
+      <DependentUpon>TeacherClassesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentClassesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentClassesForm.Designer.cs">
+      <DependentUpon>StudentClassesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentSearchForm.Designer.cs">
+      <DependentUpon>StudentSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSearchForm.Designer.cs">
+      <DependentUpon>TeacherSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResultForm.Designer.cs">
+      <DependentUpon>SearchResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SearchResultForm.resx">
+      <DependentUpon>SearchResultForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +99,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentClassesForm.resx">
+      <DependentUpon>StudentClassesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentSearchForm.resx">
+      <DependentUpon>StudentSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherClassesForm.resx">
+      <DependentUpon>TeacherClassesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSearchForm.resx">
+      <DependentUpon>TeacherSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

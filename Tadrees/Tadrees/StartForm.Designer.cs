@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.LoginForm = new System.Windows.Forms.GroupBox();
             this.LoginComboBox = new System.Windows.Forms.ComboBox();
             this.LoginButtonLogin = new System.Windows.Forms.Button();
@@ -45,8 +46,12 @@
             this.SignUpStudentTextBoxEmail = new System.Windows.Forms.TextBox();
             this.SignUpStudentTextBoxLastName = new System.Windows.Forms.TextBox();
             this.SignUpStudentTextBoxFirstName = new System.Windows.Forms.TextBox();
+            this.SignupStudentComboBox = new System.Windows.Forms.ComboBox();
+            this.StudentSearchClassLabelTitle = new System.Windows.Forms.Label();
+            this.StudentSearchClassPictureBox = new System.Windows.Forms.PictureBox();
             this.LoginForm.SuspendLayout();
             this.SignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentSearchClassPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginForm
@@ -57,9 +62,9 @@
             this.LoginForm.Controls.Add(this.LoginLabelId);
             this.LoginForm.Controls.Add(this.LoginTextBoxPassword);
             this.LoginForm.Controls.Add(this.LoginTextBoxId);
-            this.LoginForm.Location = new System.Drawing.Point(199, 117);
+            this.LoginForm.Location = new System.Drawing.Point(12, 100);
             this.LoginForm.Name = "LoginForm";
-            this.LoginForm.Size = new System.Drawing.Size(887, 69);
+            this.LoginForm.Size = new System.Drawing.Size(758, 69);
             this.LoginForm.TabIndex = 0;
             this.LoginForm.TabStop = false;
             this.LoginForm.Text = "LogIn";
@@ -70,7 +75,7 @@
             this.LoginComboBox.Items.AddRange(new object[] {
             "Teacher",
             "Student"});
-            this.LoginComboBox.Location = new System.Drawing.Point(646, 25);
+            this.LoginComboBox.Location = new System.Drawing.Point(528, 26);
             this.LoginComboBox.Name = "LoginComboBox";
             this.LoginComboBox.Size = new System.Drawing.Size(121, 24);
             this.LoginComboBox.TabIndex = 2;
@@ -78,17 +83,18 @@
             // 
             // LoginButtonLogin
             // 
-            this.LoginButtonLogin.Location = new System.Drawing.Point(794, 25);
+            this.LoginButtonLogin.Location = new System.Drawing.Point(676, 26);
             this.LoginButtonLogin.Name = "LoginButtonLogin";
             this.LoginButtonLogin.Size = new System.Drawing.Size(75, 25);
             this.LoginButtonLogin.TabIndex = 3;
             this.LoginButtonLogin.Text = "Login";
             this.LoginButtonLogin.UseVisualStyleBackColor = true;
+            this.LoginButtonLogin.Click += new System.EventHandler(this.LoginButtonLogin_Click);
             // 
             // LoginLabelPassword
             // 
             this.LoginLabelPassword.AutoSize = true;
-            this.LoginLabelPassword.Location = new System.Drawing.Point(363, 25);
+            this.LoginLabelPassword.Location = new System.Drawing.Point(245, 26);
             this.LoginLabelPassword.Name = "LoginLabelPassword";
             this.LoginLabelPassword.Size = new System.Drawing.Size(73, 17);
             this.LoginLabelPassword.TabIndex = 2;
@@ -97,7 +103,7 @@
             // LoginLabelId
             // 
             this.LoginLabelId.AutoSize = true;
-            this.LoginLabelId.Location = new System.Drawing.Point(134, 28);
+            this.LoginLabelId.Location = new System.Drawing.Point(16, 29);
             this.LoginLabelId.Name = "LoginLabelId";
             this.LoginLabelId.Size = new System.Drawing.Size(25, 17);
             this.LoginLabelId.TabIndex = 2;
@@ -105,15 +111,16 @@
             // 
             // LoginTextBoxPassword
             // 
-            this.LoginTextBoxPassword.Location = new System.Drawing.Point(442, 25);
+            this.LoginTextBoxPassword.Location = new System.Drawing.Point(324, 26);
             this.LoginTextBoxPassword.Name = "LoginTextBoxPassword";
+            this.LoginTextBoxPassword.PasswordChar = '*';
             this.LoginTextBoxPassword.Size = new System.Drawing.Size(181, 22);
             this.LoginTextBoxPassword.TabIndex = 1;
             this.LoginTextBoxPassword.UseWaitCursor = true;
             // 
             // LoginTextBoxId
             // 
-            this.LoginTextBoxId.Location = new System.Drawing.Point(165, 25);
+            this.LoginTextBoxId.Location = new System.Drawing.Point(47, 26);
             this.LoginTextBoxId.Name = "LoginTextBoxId";
             this.LoginTextBoxId.Size = new System.Drawing.Size(181, 22);
             this.LoginTextBoxId.TabIndex = 0;
@@ -121,6 +128,7 @@
             // 
             // SignUp
             // 
+            this.SignUp.Controls.Add(this.SignupStudentComboBox);
             this.SignUp.Controls.Add(this.SignUpStudentButtonSignUp);
             this.SignUp.Controls.Add(this.SignupStudentLabelPassword);
             this.SignUp.Controls.Add(this.SignupStudentLabelEmail);
@@ -130,9 +138,9 @@
             this.SignUp.Controls.Add(this.SignUpStudentTextBoxEmail);
             this.SignUp.Controls.Add(this.SignUpStudentTextBoxLastName);
             this.SignUp.Controls.Add(this.SignUpStudentTextBoxFirstName);
-            this.SignUp.Location = new System.Drawing.Point(443, 192);
+            this.SignUp.Location = new System.Drawing.Point(166, 192);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(456, 374);
+            this.SignUp.Size = new System.Drawing.Size(456, 269);
             this.SignUp.TabIndex = 1;
             this.SignUp.TabStop = false;
             this.SignUp.Text = "Signup";
@@ -140,12 +148,13 @@
             // 
             // SignUpStudentButtonSignUp
             // 
-            this.SignUpStudentButtonSignUp.Location = new System.Drawing.Point(319, 249);
+            this.SignUpStudentButtonSignUp.Location = new System.Drawing.Point(319, 214);
             this.SignUpStudentButtonSignUp.Name = "SignUpStudentButtonSignUp";
             this.SignUpStudentButtonSignUp.Size = new System.Drawing.Size(75, 33);
             this.SignUpStudentButtonSignUp.TabIndex = 9;
             this.SignUpStudentButtonSignUp.Text = "SignUp";
             this.SignUpStudentButtonSignUp.UseVisualStyleBackColor = true;
+            this.SignUpStudentButtonSignUp.Click += new System.EventHandler(this.SignUpStudentButtonSignUp_Click);
             // 
             // SignupStudentLabelPassword
             // 
@@ -216,21 +225,60 @@
             this.SignUpStudentTextBoxFirstName.Size = new System.Drawing.Size(194, 22);
             this.SignUpStudentTextBoxFirstName.TabIndex = 1;
             // 
+            // SignupStudentComboBox
+            // 
+            this.SignupStudentComboBox.FormattingEnabled = true;
+            this.SignupStudentComboBox.Items.AddRange(new object[] {
+            "Student",
+            "Teacher"});
+            this.SignupStudentComboBox.Location = new System.Drawing.Point(200, 219);
+            this.SignupStudentComboBox.Name = "SignupStudentComboBox";
+            this.SignupStudentComboBox.Size = new System.Drawing.Size(113, 24);
+            this.SignupStudentComboBox.TabIndex = 10;
+            this.SignupStudentComboBox.Text = "Student";
+            // 
+            // StudentSearchClassLabelTitle
+            // 
+            this.StudentSearchClassLabelTitle.AutoSize = true;
+            this.StudentSearchClassLabelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.StudentSearchClassLabelTitle.ForeColor = System.Drawing.Color.Teal;
+            this.StudentSearchClassLabelTitle.Location = new System.Drawing.Point(154, 9);
+            this.StudentSearchClassLabelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.StudentSearchClassLabelTitle.Name = "StudentSearchClassLabelTitle";
+            this.StudentSearchClassLabelTitle.Size = new System.Drawing.Size(697, 67);
+            this.StudentSearchClassLabelTitle.TabIndex = 10;
+            this.StudentSearchClassLabelTitle.Text = "Tadrees Virtual Coaching";
+            // 
+            // StudentSearchClassPictureBox
+            // 
+            this.StudentSearchClassPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("StudentSearchClassPictureBox.Image")));
+            this.StudentSearchClassPictureBox.Location = new System.Drawing.Point(7, 9);
+            this.StudentSearchClassPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentSearchClassPictureBox.Name = "StudentSearchClassPictureBox";
+            this.StudentSearchClassPictureBox.Size = new System.Drawing.Size(100, 92);
+            this.StudentSearchClassPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StudentSearchClassPictureBox.TabIndex = 9;
+            this.StudentSearchClassPictureBox.TabStop = false;
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 578);
+            this.ClientSize = new System.Drawing.Size(878, 553);
+            this.Controls.Add(this.StudentSearchClassLabelTitle);
+            this.Controls.Add(this.StudentSearchClassPictureBox);
             this.Controls.Add(this.SignUp);
             this.Controls.Add(this.LoginForm);
             this.Name = "StartForm";
-            this.Text = "Tadrees Online Coaching";
+            this.Text = "Tadrees Virtual Coaching";
             this.Load += new System.EventHandler(this.StartForm_Load);
             this.LoginForm.ResumeLayout(false);
             this.LoginForm.PerformLayout();
             this.SignUp.ResumeLayout(false);
             this.SignUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentSearchClassPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,6 +301,9 @@
         private System.Windows.Forms.Label SignupStudentLabelPassword;
         private System.Windows.Forms.Label SignupStudentLabelEmail;
         private System.Windows.Forms.Button SignUpStudentButtonSignUp;
+        private System.Windows.Forms.ComboBox SignupStudentComboBox;
+        private System.Windows.Forms.Label StudentSearchClassLabelTitle;
+        private System.Windows.Forms.PictureBox StudentSearchClassPictureBox;
     }
 }
 

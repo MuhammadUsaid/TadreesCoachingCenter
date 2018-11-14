@@ -8,3 +8,18 @@ E:\Semester3\Object Oriented Programming\VS C++\Project1\Tadrees\Tadrees\obj\Deb
 E:\Semester3\Object Oriented Programming\VS C++\Project1\Tadrees\Tadrees\obj\Debug\Tadrees.csproj.CoreCompileInputs.cache
 E:\Semester3\Object Oriented Programming\VS C++\Project1\Tadrees\Tadrees\obj\Debug\Tadrees.exe
 E:\Semester3\Object Oriented Programming\VS C++\Project1\Tadrees\Tadrees\obj\Debug\Tadrees.pdb
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\bin\Debug\Tadrees.exe.config
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\bin\Debug\Tadrees.exe
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\bin\Debug\Tadrees.pdb
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.csprojAssemblyReference.cache
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.SearchResultForm.resources
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.StartForm.resources
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.Properties.Resources.resources
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.csproj.GenerateResource.cache
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.csproj.CoreCompileInputs.cache
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.exe
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.pdb
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.StudentClassesForm.resources
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.StudentSearchForm.resources
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.TeacherClassesForm.resources
+E:\Semester3\Database Management Systems\Project\Tadrees\Tadrees\obj\Debug\Tadrees.TeacherSearchForm.resources

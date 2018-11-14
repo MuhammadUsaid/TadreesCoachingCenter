@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tadrees
 {
-    public partial class Form1 : Form
+    public partial class SearchResultForm : Form
     {
-        public Form1()
+        public SearchResultForm()
         {
             InitializeComponent();
         }
