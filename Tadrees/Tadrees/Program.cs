@@ -16,7 +16,7 @@ namespace Tadrees
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SearchResultForm());
+            Application.Run(new StartForm());
         }
     }
 }

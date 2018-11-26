@@ -37,6 +37,7 @@
             this.LoginTextBoxPassword = new System.Windows.Forms.TextBox();
             this.LoginTextBoxId = new System.Windows.Forms.TextBox();
             this.SignUp = new System.Windows.Forms.GroupBox();
+            this.SignupStudentComboBox = new System.Windows.Forms.ComboBox();
             this.SignUpStudentButtonSignUp = new System.Windows.Forms.Button();
             this.SignupStudentLabelPassword = new System.Windows.Forms.Label();
             this.SignupStudentLabelEmail = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.SignUpStudentTextBoxEmail = new System.Windows.Forms.TextBox();
             this.SignUpStudentTextBoxLastName = new System.Windows.Forms.TextBox();
             this.SignUpStudentTextBoxFirstName = new System.Windows.Forms.TextBox();
-            this.SignupStudentComboBox = new System.Windows.Forms.ComboBox();
             this.StudentSearchClassLabelTitle = new System.Windows.Forms.Label();
             this.StudentSearchClassPictureBox = new System.Windows.Forms.PictureBox();
             this.LoginForm.SuspendLayout();
@@ -138,13 +138,25 @@
             this.SignUp.Controls.Add(this.SignUpStudentTextBoxEmail);
             this.SignUp.Controls.Add(this.SignUpStudentTextBoxLastName);
             this.SignUp.Controls.Add(this.SignUpStudentTextBoxFirstName);
-            this.SignUp.Location = new System.Drawing.Point(166, 192);
+            this.SignUp.Location = new System.Drawing.Point(12, 192);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(456, 269);
+            this.SignUp.Size = new System.Drawing.Size(758, 331);
             this.SignUp.TabIndex = 1;
             this.SignUp.TabStop = false;
             this.SignUp.Text = "Signup";
             this.SignUp.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // SignupStudentComboBox
+            // 
+            this.SignupStudentComboBox.FormattingEnabled = true;
+            this.SignupStudentComboBox.Items.AddRange(new object[] {
+            "Student",
+            "Teacher"});
+            this.SignupStudentComboBox.Location = new System.Drawing.Point(200, 219);
+            this.SignupStudentComboBox.Name = "SignupStudentComboBox";
+            this.SignupStudentComboBox.Size = new System.Drawing.Size(113, 24);
+            this.SignupStudentComboBox.TabIndex = 10;
+            this.SignupStudentComboBox.Text = "Student";
             // 
             // SignUpStudentButtonSignUp
             // 
@@ -220,29 +232,18 @@
             // 
             // SignUpStudentTextBoxFirstName
             // 
-            this.SignUpStudentTextBoxFirstName.Location = new System.Drawing.Point(200, 39);
+            this.SignUpStudentTextBoxFirstName.Location = new System.Drawing.Point(200, 40);
             this.SignUpStudentTextBoxFirstName.Name = "SignUpStudentTextBoxFirstName";
             this.SignUpStudentTextBoxFirstName.Size = new System.Drawing.Size(194, 22);
             this.SignUpStudentTextBoxFirstName.TabIndex = 1;
-            // 
-            // SignupStudentComboBox
-            // 
-            this.SignupStudentComboBox.FormattingEnabled = true;
-            this.SignupStudentComboBox.Items.AddRange(new object[] {
-            "Student",
-            "Teacher"});
-            this.SignupStudentComboBox.Location = new System.Drawing.Point(200, 219);
-            this.SignupStudentComboBox.Name = "SignupStudentComboBox";
-            this.SignupStudentComboBox.Size = new System.Drawing.Size(113, 24);
-            this.SignupStudentComboBox.TabIndex = 10;
-            this.SignupStudentComboBox.Text = "Student";
+            this.SignUpStudentTextBoxFirstName.Text = "0";
             // 
             // StudentSearchClassLabelTitle
             // 
             this.StudentSearchClassLabelTitle.AutoSize = true;
             this.StudentSearchClassLabelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
             this.StudentSearchClassLabelTitle.ForeColor = System.Drawing.Color.Teal;
-            this.StudentSearchClassLabelTitle.Location = new System.Drawing.Point(154, 9);
+            this.StudentSearchClassLabelTitle.Location = new System.Drawing.Point(132, 30);
             this.StudentSearchClassLabelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StudentSearchClassLabelTitle.Name = "StudentSearchClassLabelTitle";
             this.StudentSearchClassLabelTitle.Size = new System.Drawing.Size(697, 67);
@@ -252,7 +253,7 @@
             // StudentSearchClassPictureBox
             // 
             this.StudentSearchClassPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("StudentSearchClassPictureBox.Image")));
-            this.StudentSearchClassPictureBox.Location = new System.Drawing.Point(7, 9);
+            this.StudentSearchClassPictureBox.Location = new System.Drawing.Point(19, 5);
             this.StudentSearchClassPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.StudentSearchClassPictureBox.Name = "StudentSearchClassPictureBox";
             this.StudentSearchClassPictureBox.Size = new System.Drawing.Size(100, 92);
